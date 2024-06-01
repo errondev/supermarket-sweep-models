@@ -15,9 +15,8 @@ const mongoose_2 = require("mongoose");
 const price_model_1 = require("./price.model");
 const product_model_1 = require("./product.model");
 const store_model_1 = require("./store.model");
-let PriceHistory = class PriceHistory extends mongoose_2.Document {
+let PriceHistory = exports.PriceHistory = class PriceHistory extends mongoose_2.Document {
 };
-exports.PriceHistory = PriceHistory;
 __decorate([
     (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
     __metadata("design:type", store_model_1.Store)

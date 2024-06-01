@@ -12,9 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CategorySchema = exports.Category = exports.StoreMappingsSchema = exports.StoreMappings = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-let StoreMappings = class StoreMappings extends mongoose_2.Document {
+let StoreMappings = exports.StoreMappings = class StoreMappings extends mongoose_2.Document {
 };
-exports.StoreMappings = StoreMappings;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
@@ -31,9 +30,8 @@ exports.StoreMappings = StoreMappings = __decorate([
     (0, mongoose_1.Schema)({ timestamps: false, id: false, _id: false })
 ], StoreMappings);
 exports.StoreMappingsSchema = mongoose_1.SchemaFactory.createForClass(StoreMappings);
-let Category = class Category extends mongoose_2.Document {
+let Category = exports.Category = class Category extends mongoose_2.Document {
 };
-exports.Category = Category;
 __decorate([
     (0, mongoose_1.Prop)({
         required: false,

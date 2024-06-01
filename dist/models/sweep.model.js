@@ -13,9 +13,8 @@ exports.SweepSchema = exports.Sweep = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const store_model_1 = require("./store.model");
-let Sweep = class Sweep extends mongoose_2.Document {
+let Sweep = exports.Sweep = class Sweep extends mongoose_2.Document {
 };
-exports.Sweep = Sweep;
 __decorate([
     (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
     __metadata("design:type", store_model_1.Store)

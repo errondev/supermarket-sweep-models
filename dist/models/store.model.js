@@ -14,9 +14,8 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const enums_1 = require("../enums");
 const sweep_model_1 = require("./sweep.model");
-let Store = class Store extends mongoose_2.Document {
+let Store = exports.Store = class Store extends mongoose_2.Document {
 };
-exports.Store = Store;
 __decorate([
     (0, mongoose_1.Prop)({
         type: mongoose_2.default.Types.ObjectId,

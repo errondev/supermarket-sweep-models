@@ -14,9 +14,8 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const price_model_1 = require("./price.model");
 const store_model_1 = require("./store.model");
-let Product = class Product extends mongoose_2.Document {
+let Product = exports.Product = class Product extends mongoose_2.Document {
 };
-exports.Product = Product;
 __decorate([
     (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
     __metadata("design:type", store_model_1.Store)
