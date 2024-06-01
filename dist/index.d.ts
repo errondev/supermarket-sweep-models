@@ -4,3 +4,5 @@ export * from './models/product.model';
 export * from './models/price.model';
 export * from './models/price-history.model';
 export * from './models/sweep.model';
+export * from './enums';
+export * from './types';

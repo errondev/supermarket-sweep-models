@@ -20,4 +20,6 @@ __exportStar(require("./models/product.model"), exports);
 __exportStar(require("./models/price.model"), exports);
 __exportStar(require("./models/price-history.model"), exports);
 __exportStar(require("./models/sweep.model"), exports);
+__exportStar(require("./enums"), exports);
+__exportStar(require("./types"), exports);
 //# sourceMappingURL=index.js.map
