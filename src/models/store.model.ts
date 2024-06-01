@@ -6,7 +6,7 @@ import { DayOfWeek } from '../enums';
 import { Sweep } from './sweep.model';
 
 @Schema({ timestamps: true })
-export class Store extends Document {
+export class Store extends Document<mongoose.Types.ObjectId> {
   @Prop({
     type: mongoose.Types.ObjectId,
     ref: 'Sweep',

@@ -1,7 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Document } from 'mongoose';
 
-class StoreMappings {
+@Schema({ timestamps: false, id: false, _id: false })
+export class StoreMappings extends Document {
   @Prop()
   woolworths?: string[];
 
@@ -12,8 +13,10 @@ class StoreMappings {
   chemistWarehouse?: string[];
 }
 
+export const StoreMappingsSchema = SchemaFactory.createForClass(StoreMappings);
+
 @Schema({ timestamps: true })
-export class Category extends Document {
+export class Category extends Document<mongoose.Types.ObjectId> {
   @Prop({
     required: false,
     type: mongoose.Types.ObjectId,
@@ -33,7 +36,7 @@ export class Category extends Document {
   @Prop()
   cron?: string;
 
-  @Prop({ required: true, type: StoreMappings })
+  @Prop({ required: true, type: StoreMappingsSchema })
   mappings: StoreMappings;
 
   @Prop({ required: true, default: false })

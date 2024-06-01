@@ -5,8 +5,8 @@ import { Category } from './category.model';
 import { Price, PriceSchema } from './price.model';
 import { Store } from './store.model';
 
-@Schema()
-export class Product extends Document {
+@Schema({ timestamps: true })
+export class Product extends Document<mongoose.Types.ObjectId> {
   @Prop({ required: true, type: mongoose.Types.ObjectId, ref: 'Store' })
   store: Store;
 

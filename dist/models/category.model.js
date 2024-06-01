@@ -9,11 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CategorySchema = exports.Category = void 0;
+exports.CategorySchema = exports.Category = exports.StoreMappingsSchema = exports.StoreMappings = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-class StoreMappings {
-}
+let StoreMappings = class StoreMappings extends mongoose_2.Document {
+};
+exports.StoreMappings = StoreMappings;
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
@@ -26,6 +27,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
 ], StoreMappings.prototype, "chemistWarehouse", void 0);
+exports.StoreMappings = StoreMappings = __decorate([
+    (0, mongoose_1.Schema)({ timestamps: false, id: false, _id: false })
+], StoreMappings);
+exports.StoreMappingsSchema = mongoose_1.SchemaFactory.createForClass(StoreMappings);
 let Category = class Category extends mongoose_2.Document {
 };
 exports.Category = Category;
@@ -54,7 +59,7 @@ __decorate([
     __metadata("design:type", String)
 ], Category.prototype, "cron", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, type: StoreMappings }),
+    (0, mongoose_1.Prop)({ required: true, type: exports.StoreMappingsSchema }),
     __metadata("design:type", StoreMappings)
 ], Category.prototype, "mappings", void 0);
 __decorate([

@@ -35,7 +35,7 @@ __decorate([
     __metadata("design:type", Date)
 ], PriceHistory.prototype, "createdAt", void 0);
 exports.PriceHistory = PriceHistory = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: { createdAt: true, updatedAt: false }, id: true })
+    (0, mongoose_1.Schema)({ timestamps: { createdAt: true, updatedAt: false } })
 ], PriceHistory);
 exports.PriceHistorySchema = mongoose_1.SchemaFactory.createForClass(PriceHistory);
 exports.PriceHistorySchema.index({ 'price.sweep': 1, product: 1 }, { unique: true });
