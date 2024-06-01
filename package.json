@@ -2,7 +2,7 @@
   "name": "@supermarket-sweep/models",
   "version": "1.1.0",
   "description": "Model package for Supermarket Sweep API",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
