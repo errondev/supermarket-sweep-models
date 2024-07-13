@@ -6,7 +6,6 @@ export declare class Store extends Document<mongoose.Types.ObjectId> {
     code: string;
     name: string;
     prefix: string;
-    isAvailable: boolean;
     specialUpdateDay?: DayOfWeek;
     createdAt: Date;
     updatedAt: Date;

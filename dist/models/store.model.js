@@ -36,10 +36,6 @@ __decorate([
     __metadata("design:type", String)
 ], Store.prototype, "prefix", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, default: true }),
-    __metadata("design:type", Boolean)
-], Store.prototype, "isAvailable", void 0);
-__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Store.prototype, "specialUpdateDay", void 0);

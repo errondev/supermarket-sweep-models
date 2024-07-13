@@ -22,9 +22,6 @@ export class Store extends Document<mongoose.Types.ObjectId> {
   @Prop({ required: true, unique: true })
   prefix: string;
 
-  @Prop({ required: true, default: true })
-  isAvailable: boolean;
-
   @Prop()
   specialUpdateDay?: DayOfWeek;
 
