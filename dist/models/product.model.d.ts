@@ -1,16 +1,14 @@
 import mongoose, { Document } from 'mongoose';
-import { Category } from './category.model';
 import { Price } from './price.model';
-import { Store } from './store.model';
 export declare class Product extends Document<mongoose.Types.ObjectId> {
-    store: Store;
+    storeCode: string;
     code: string;
     name: string;
     brand: string;
     packageSize?: string;
     imageUrls: string[];
     productUrl?: string;
-    categories: Category[];
+    categoryIds: mongoose.Types.ObjectId[];
     isRestricted: boolean;
     isAvailable: boolean;
     price?: Price;

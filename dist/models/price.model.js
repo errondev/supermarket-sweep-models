@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PriceSchema = exports.Price = exports.LocationPriceSchema = exports.LocationPrice = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const sweep_model_1 = require("./sweep.model");
 let LocationPrice = exports.LocationPrice = class LocationPrice extends mongoose_2.Document {
 };
 __decorate([
@@ -63,8 +62,8 @@ __decorate([
         type: mongoose_2.default.Types.ObjectId,
         ref: 'Sweep',
     }),
-    __metadata("design:type", sweep_model_1.Sweep)
-], Price.prototype, "sweep", void 0);
+    __metadata("design:type", mongoose_2.default.Types.ObjectId)
+], Price.prototype, "sweepId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: false, type: exports.LocationPriceSchema }),
     __metadata("design:type", LocationPrice)

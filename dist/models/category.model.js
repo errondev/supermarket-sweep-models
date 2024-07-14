@@ -33,13 +33,9 @@ exports.StoreMappingsSchema = mongoose_1.SchemaFactory.createForClass(StoreMappi
 let Category = exports.Category = class Category extends mongoose_2.Document {
 };
 __decorate([
-    (0, mongoose_1.Prop)({
-        required: false,
-        type: mongoose_2.default.Types.ObjectId,
-        ref: 'Category',
-    }),
-    __metadata("design:type", Category)
-], Category.prototype, "parent", void 0);
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], Category.prototype, "parentCode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
     __metadata("design:type", String)

@@ -12,13 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SweepSchema = exports.Sweep = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const store_model_1 = require("./store.model");
 let Sweep = exports.Sweep = class Sweep extends mongoose_2.Document {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
-    __metadata("design:type", store_model_1.Store)
-], Sweep.prototype, "store", void 0);
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Sweep.prototype, "storeCode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Date)

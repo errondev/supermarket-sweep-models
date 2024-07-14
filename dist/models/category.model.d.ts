@@ -10,7 +10,7 @@ export declare const StoreMappingsSchema: mongoose.Schema<StoreMappings, mongoos
     _id: unknown;
 }>>;
 export declare class Category extends Document<mongoose.Types.ObjectId> {
-    parent?: Category;
+    parentCode?: string;
     code: string;
     name: string;
     index: number;

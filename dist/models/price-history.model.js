@@ -13,18 +13,16 @@ exports.PriceHistorySchema = exports.PriceHistory = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const price_model_1 = require("./price.model");
-const product_model_1 = require("./product.model");
-const store_model_1 = require("./store.model");
 let PriceHistory = exports.PriceHistory = class PriceHistory extends mongoose_2.Document {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
-    __metadata("design:type", store_model_1.Store)
-], PriceHistory.prototype, "store", void 0);
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], PriceHistory.prototype, "storeCode", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Product' }),
-    __metadata("design:type", product_model_1.Product)
-], PriceHistory.prototype, "product", void 0);
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], PriceHistory.prototype, "productCode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, type: price_model_1.PriceSchema }),
     __metadata("design:type", price_model_1.Price)

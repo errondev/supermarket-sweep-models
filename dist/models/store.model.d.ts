@@ -1,8 +1,7 @@
 import mongoose, { Document } from 'mongoose';
 import { DayOfWeek } from '../enums';
-import { Sweep } from './sweep.model';
 export declare class Store extends Document<mongoose.Types.ObjectId> {
-    sweep?: Sweep;
+    sweepId?: mongoose.Types.ObjectId;
     code: string;
     name: string;
     prefix: string;

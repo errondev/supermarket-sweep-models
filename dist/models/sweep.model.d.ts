@@ -1,7 +1,6 @@
 import mongoose, { Document } from 'mongoose';
-import { Store } from './store.model';
 export declare class Sweep extends Document<mongoose.Types.ObjectId> {
-    store: Store;
+    storeCode: string;
     startedAt: Date;
     finishedAt?: Date;
     dealsEndedAt?: Date;

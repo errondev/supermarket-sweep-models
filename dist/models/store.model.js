@@ -13,7 +13,6 @@ exports.StoreSchema = exports.Store = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const enums_1 = require("../enums");
-const sweep_model_1 = require("./sweep.model");
 let Store = exports.Store = class Store extends mongoose_2.Document {
 };
 __decorate([
@@ -21,8 +20,8 @@ __decorate([
         type: mongoose_2.default.Types.ObjectId,
         ref: 'Sweep',
     }),
-    __metadata("design:type", sweep_model_1.Sweep)
-], Store.prototype, "sweep", void 0);
+    __metadata("design:type", mongoose_2.default.Types.ObjectId)
+], Store.prototype, "sweepId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
     __metadata("design:type", String)

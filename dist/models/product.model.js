@@ -13,13 +13,12 @@ exports.ProductSchema = exports.Product = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const price_model_1 = require("./price.model");
-const store_model_1 = require("./store.model");
 let Product = exports.Product = class Product extends mongoose_2.Document {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, type: mongoose_2.default.Types.ObjectId, ref: 'Store' }),
-    __metadata("design:type", store_model_1.Store)
-], Product.prototype, "store", void 0);
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Product.prototype, "storeCode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
     __metadata("design:type", String)
@@ -47,7 +46,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)([{ type: mongoose_2.default.Types.ObjectId, ref: 'Category' }]),
     __metadata("design:type", Array)
-], Product.prototype, "categories", void 0);
+], Product.prototype, "categoryIds", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, default: false }),
     __metadata("design:type", Boolean)

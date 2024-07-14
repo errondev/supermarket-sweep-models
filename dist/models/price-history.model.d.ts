@@ -1,10 +1,8 @@
 import mongoose, { Document } from 'mongoose';
 import { Price } from './price.model';
-import { Product } from './product.model';
-import { Store } from './store.model';
 export declare class PriceHistory extends Document<mongoose.Types.ObjectId> {
-    store: Store;
-    product: Product;
+    storeCode: string;
+    productCode: string;
     price: Price;
     createdAt: Date;
 }

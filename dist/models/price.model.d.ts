@@ -1,6 +1,5 @@
 import mongoose, { Document } from 'mongoose';
 import { BestLocation } from '../types';
-import { Sweep } from './sweep.model';
 export declare class LocationPrice extends Document {
     bestPrice: number;
     currentPrice?: number;
@@ -18,7 +17,7 @@ export declare const LocationPriceSchema: mongoose.Schema<LocationPrice, mongoos
     _id: unknown;
 }>>;
 export declare class Price extends Document {
-    sweep: Sweep;
+    sweepId: mongoose.Types.ObjectId;
     instore?: LocationPrice;
     online?: LocationPrice;
     bestPrice: number;
