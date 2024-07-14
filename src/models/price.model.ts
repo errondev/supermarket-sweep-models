@@ -3,8 +3,6 @@ import mongoose, { Document } from 'mongoose';
 
 import { BestLocation } from '../types';
 
-import { Sweep } from './sweep.model';
-
 @Schema({ timestamps: false, id: false, _id: false })
 export class LocationPrice extends Document {
   @Prop()
@@ -44,7 +42,7 @@ export class Price extends Document {
     type: mongoose.Types.ObjectId,
     ref: 'Sweep',
   })
-  sweep: Sweep;
+  sweepId: mongoose.Types.ObjectId;
 
   @Prop({ required: false, type: LocationPriceSchema })
   instore?: LocationPrice;

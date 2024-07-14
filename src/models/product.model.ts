@@ -1,14 +1,12 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Document } from 'mongoose';
 
-import { Category } from './category.model';
 import { Price, PriceSchema } from './price.model';
-import { Store } from './store.model';
 
 @Schema({ timestamps: true })
 export class Product extends Document<mongoose.Types.ObjectId> {
-  @Prop({ required: true, type: mongoose.Types.ObjectId, ref: 'Store' })
-  store: Store;
+  @Prop({ required: true })
+  storeCode: string;
 
   @Prop({ required: true, unique: true, index: true })
   code: string;
@@ -29,7 +27,7 @@ export class Product extends Document<mongoose.Types.ObjectId> {
   productUrl?: string;
 
   @Prop([{ type: mongoose.Types.ObjectId, ref: 'Category' }])
-  categories: Category[];
+  categoryIds: mongoose.Types.ObjectId[];
 
   @Prop({ required: true, default: false })
   isRestricted: boolean;

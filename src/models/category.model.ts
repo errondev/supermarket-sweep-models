@@ -17,12 +17,8 @@ export const StoreMappingsSchema = SchemaFactory.createForClass(StoreMappings);
 
 @Schema({ timestamps: true })
 export class Category extends Document<mongoose.Types.ObjectId> {
-  @Prop({
-    required: false,
-    type: mongoose.Types.ObjectId,
-    ref: 'Category',
-  })
-  parent?: Category;
+  @Prop()
+  parentCode?: string;
 
   @Prop({ required: true, unique: true, index: true })
   code: string;
