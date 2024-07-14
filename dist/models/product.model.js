@@ -44,9 +44,9 @@ __decorate([
     __metadata("design:type", String)
 ], Product.prototype, "productUrl", void 0);
 __decorate([
-    (0, mongoose_1.Prop)([{ type: mongoose_2.default.Types.ObjectId, ref: 'Category' }]),
+    (0, mongoose_1.Prop)([String]),
     __metadata("design:type", Array)
-], Product.prototype, "categoryIds", void 0);
+], Product.prototype, "categoryCodes", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, default: false }),
     __metadata("design:type", Boolean)

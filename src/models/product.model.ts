@@ -26,8 +26,8 @@ export class Product extends Document<mongoose.Types.ObjectId> {
   @Prop()
   productUrl?: string;
 
-  @Prop([{ type: mongoose.Types.ObjectId, ref: 'Category' }])
-  categoryIds: mongoose.Types.ObjectId[];
+  @Prop([String])
+  categoryCodes: string[];
 
   @Prop({ required: true, default: false })
   isRestricted: boolean;

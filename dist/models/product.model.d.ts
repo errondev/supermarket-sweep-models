@@ -8,7 +8,7 @@ export declare class Product extends Document<mongoose.Types.ObjectId> {
     packageSize?: string;
     imageUrls: string[];
     productUrl?: string;
-    categoryIds: mongoose.Types.ObjectId[];
+    categoryCodes: string[];
     isRestricted: boolean;
     isAvailable: boolean;
     price?: Price;
