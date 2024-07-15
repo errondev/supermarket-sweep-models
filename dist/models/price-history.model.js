@@ -35,5 +35,5 @@ exports.PriceHistory = PriceHistory = __decorate([
     (0, mongoose_1.Schema)({ timestamps: { createdAt: true, updatedAt: false } })
 ], PriceHistory);
 exports.PriceHistorySchema = mongoose_1.SchemaFactory.createForClass(PriceHistory);
-exports.PriceHistorySchema.index({ 'price.sweep': 1, product: 1 }, { unique: true });
+exports.PriceHistorySchema.index({ 'price.sweepId': 1, productCode: 1 }, { unique: true });
 //# sourceMappingURL=price-history.model.js.map

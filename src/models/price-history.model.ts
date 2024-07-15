@@ -19,4 +19,7 @@ export class PriceHistory extends Document<mongoose.Types.ObjectId> {
 }
 
 export const PriceHistorySchema = SchemaFactory.createForClass(PriceHistory);
-PriceHistorySchema.index({ 'price.sweep': 1, product: 1 }, { unique: true });
+PriceHistorySchema.index(
+  { 'price.sweepId': 1, productCode: 1 },
+  { unique: true },
+);
