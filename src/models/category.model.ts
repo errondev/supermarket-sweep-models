@@ -29,9 +29,6 @@ export class Category extends Document<mongoose.Types.ObjectId> {
   @Prop({ required: true })
   index: number;
 
-  @Prop()
-  cron?: string;
-
   @Prop({ required: true, type: StoreMappingsSchema })
   mappings: StoreMappings;
 

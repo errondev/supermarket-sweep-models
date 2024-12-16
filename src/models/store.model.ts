@@ -1,9 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Document } from 'mongoose';
 
-import { DayOfWeek } from '../enums';
-
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, id: false, _id: false })
 export class Store extends Document<mongoose.Types.ObjectId> {
   @Prop({
     type: mongoose.Types.ObjectId,
@@ -19,9 +17,6 @@ export class Store extends Document<mongoose.Types.ObjectId> {
 
   @Prop({ required: true, unique: true })
   prefix: string;
-
-  @Prop()
-  specialUpdateDay?: DayOfWeek;
 
   @Prop()
   createdAt: Date;
