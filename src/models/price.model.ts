@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Document } from 'mongoose';
 
-import { BestLocation } from '../types';
+import { BestLocation } from '../types.ts';
 
 @Schema({ timestamps: false, id: false, _id: false })
 export class Price extends Document {
