@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Document } from 'mongoose';
 
-import { Price, PriceSchema } from './price.model.ts';
+import { Price, PriceSchema } from './price.ts';
 
 @Schema({ timestamps: { createdAt: true, updatedAt: false } })
 export class PriceHistory extends Document<mongoose.Types.ObjectId> {
